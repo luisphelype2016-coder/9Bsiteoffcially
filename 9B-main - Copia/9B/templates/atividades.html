@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
+
+<h2>Atividades</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<input name="texto">
+<input type="file" name="imagem">
+<button>Enviar</button>
+</form>
+
+{% for a in atividades %}
+<div class="card">
+{{a[1]}} - {{a[3]}}
+{% if a[2] %}
+<img src="/{{a[2]}}">
+{% endif %}
+</div>
+{% endfor %}

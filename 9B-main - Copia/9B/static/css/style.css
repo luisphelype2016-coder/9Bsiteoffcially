@@ -1,0 +1,242 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* FUNDO GALÁXIA ANIMADO */
+body {
+    min-height: 100vh;
+    color: white;
+    background: radial-gradient(circle at 20% 30%, #1e3a8a, #020617 70%);
+    overflow-x: hidden;
+}
+
+/* ANIMAÇÃO DE FUNDO */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: estrelas 60s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes estrelas {
+    from { transform: translate(0,0); }
+    to { transform: translate(-500px, -500px); }
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* BOTÕES NAV */
+nav button {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #3b82f6;
+    transform: scale(1.1);
+}
+
+/* GRID HOME */
+.grid {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFEITO BRILHO */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(25deg);
+    top: -100%;
+    left: -100%;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px #3b82f6;
+}
+
+/* TAMANHOS */
+.grande {
+    grid-column: span 2;
+    height: 220px;
+}
+
+.direita {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.pequeno {
+    height: 200px;
+    width: 200px;
+}
+
+.card {
+     height: 200px;
+    width: 200px;
+}
+
+/* FORM */
+form {
+    margin: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* BOTÃO PADRÃO */
+button {
+    background: linear-gradient(45deg, #3b82f6, #06b6d4);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #3b82f6;
+}
+
+/* CHAT */
+#chat {
+    height: 300px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* IMAGENS */
+img {
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grande, .direita {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+body {
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.tema1 .card { background: rgba(255,255,255,0.05); }
+.tema2 .card { background: rgba(0,0,0,0.2); }
+.tema3 .card { background: rgba(255,255,255,0.1); }
+.tema4 .card { background: rgba(0,0,0,0.2); }
+.tema5 .card { background: rgba(0,0,0,0.3); }
+.tema6 .card { background: rgba(255,255,255,0.05); }
+.tema7 .card { background: rgba(255,255,255,0.08); }
+
+body::before {
+    pointer-events: none;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.btn{
+    background:#38bdf8;
+    border:none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.title{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: -1;
+}

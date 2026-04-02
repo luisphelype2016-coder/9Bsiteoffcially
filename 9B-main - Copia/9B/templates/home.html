@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/temas.css">
+</head>
+
+<body class="{{ session.get('tema','tema1') }}">
+
+<nav>
+<h1>9B</h1>
+
+<div>
+<button onclick="mudarTema('tema1')">🌌</button>
+<button onclick="mudarTema('tema2')">🌊</button>
+<button onclick="mudarTema('tema3')">🌸</button>
+<button onclick="mudarTema('tema4')">🌿</button>
+<button onclick="mudarTema('tema5')">🔥</button>
+<button onclick="mudarTema('tema6')">⭐</button>
+<button onclick="mudarTema('tema7')">🌙</button>
+</div>
+
+</nav>
+
+<div class="grid">
+
+<a href="/assuntos" class="card">Assuntos</a>
+<a href="/atividades" class="card">Atividades</a>
+<a href="/grupos" class="card">Grupos</a>
+<a href="/redacoes" class="card grande direita">Redações</a>
+<a href="/slides" class="card grande">Slides</a>
+<a href="/lojas" class="card pequeno">Lojas</a>
+
+</div>
+
+<script src="/static/js/tema.js"></script>
+
+</body>
+</html>

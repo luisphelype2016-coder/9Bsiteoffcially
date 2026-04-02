@@ -1,0 +1,41 @@
+/* 🌌 TEMA 1 - GALÁXIA (padrão) */
+.tema1 {
+    background: radial-gradient(circle at top, #1e3a8a, #020617);
+    color: white;
+}
+
+/* 🌊 TEMA 2 - OCEANO */
+.tema2 {
+    background: linear-gradient(135deg, #0ea5e9, #022c22);
+    color: #e0f2fe;
+}
+
+/* 🌸 TEMA 3 - ROSA NEON */
+.tema3 {
+    background: linear-gradient(135deg, #ff4ecd, #5b21b6);
+    color: white;
+}
+
+/* 🌿 TEMA 4 - NATUREZA */
+.tema4 {
+    background: linear-gradient(135deg, #065f46, #022c22);
+    color: #d1fae5;
+}
+
+/* 🔥 TEMA 5 - FIRE */
+.tema5 {
+    background: linear-gradient(135deg, #ea580c, #7c2d12);
+    color: #fff7ed;
+}
+
+/* ⚡ TEMA 6 - DARK TECH */
+.tema6 {
+    background: #0f172a;
+    color: #38bdf8;
+}
+
+/* 🌙 TEMA 7 - NIGHT PURPLE */
+.tema7 {
+    background: linear-gradient(135deg, #4c1d95, #1e1b4b);
+    color: #e9d5ff;
+}

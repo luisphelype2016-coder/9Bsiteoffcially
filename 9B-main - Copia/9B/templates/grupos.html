@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
+
+<h2>Grupos</h2>
+
+<form method="POST">
+<input name="nome">
+<button>Criar</button>
+</form>
+
+{% for g in grupos %}
+<div class="card">
+<a href="/grupo/{{g[0]}}">{{g[1]}}</a>
+</div>
+{% endfor %}

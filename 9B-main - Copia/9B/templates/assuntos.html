@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Assuntos 9B</title>
+</head>
+<body>
+<div class="navbar">
+
+<h1>9B</h1>
+
+</div>
+
+<div class="container">
+<h1 class="title">Assuntos do Mês</h1>
+<form method="POST">
+<input type="texto" name="titulo" placeholder="Título do assunto">
+<textarea name="conteudo" placeholder="Conteúdo"></textarea>
+<button class="btn">Publicar</button>
+
+</form>
+</div>
+
+
+<div class="posts">
+
+{% for assunto in assuntos %}
+
+<div class="post">
+<h3>{{assunto.titulo}}</h3>
+<p>{{assunto.conteudo}}</p>
+<small>Postado por {{assunto.autor}}</small>
+</div>
+
+{% endfor %}
+
+</div>
+</div>
+
+
+{% for assunto in assuntos %}
+
+<div class="card">
+<h3>{{assunto.titulo}}</h3>
+<p>{{assunto.texto}}</p>
+<p>Postado por: {{assunto.autor}}</p>
+
+<a href="/deletar_assunto/{{assunto.id}}">
+<button class="btn-delete">Excluir</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>

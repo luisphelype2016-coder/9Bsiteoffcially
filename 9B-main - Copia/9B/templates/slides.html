@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
+
+<h2>Slides</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="arquivo">
+<button>Enviar</button>
+</form>
+
+{% for s in slides %}
+<div class="card">
+<a href="/{{s[2]}}">Abrir</a>
+</div>
+{% endfor %}

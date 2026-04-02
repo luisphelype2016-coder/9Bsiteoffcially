@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
+
+<h2>Lojas</h2>
+
+<form method="POST">
+<input name="nome">
+<select name="categoria">
+<option>Lanches</option>
+<option>Acessórios</option>
+<option>Brinquedos</option>
+</select>
+<button>Criar</button>
+</form>
+
+{% for l in lojas %}
+<div class="card">
+{{l[1]}} - {{l[2]}}
+</div>
+{% endfor %}

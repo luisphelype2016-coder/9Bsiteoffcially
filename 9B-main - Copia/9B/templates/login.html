@@ -1,19 +1,33 @@
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
 
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/temas.css') }}">
+
+<title>Login - Portal 9B</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
+
 <body>
 
+<canvas id="galaxy"></canvas>
+
+<div class="container">
+
+<h2>Login Portal 9B</h2>
+
 <form method="POST">
-<h2>Login</h2>
-<input name="username" placeholder="Usuário">
-<button>Entrar</button>
+
+<input type="text" name="username" placeholder="Usuário">
+<input type="password" name="password" placeholder="Senha">
+<button class="btn">Entrar</button>
+
 </form>
+</div>
 
 </body>
 </html>

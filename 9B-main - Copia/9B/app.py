@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 import sqlite3
 from datetime import datetime
-import os
 
 app = Flask(__name__)
 app.secret_key = "segredo"
@@ -40,9 +39,13 @@ usuarios = {
 
 }
 
-# ---------------- BANCO AUTO ----------------
+
 def conectar():
-    return sqlite3.connect("database.db")
+
+    conn = sqlite3.connect("database.db")
+    conn.row_factory = sqlite3.Row
+    return conn
+
 
 def criar_banco():
     conn = conectar()
@@ -159,7 +162,7 @@ def assuntos():
 
         cursor.execute(
         "INSERT INTO assuntos (titulo,texto,autor) VALUES (?,?,?)",
-        (titulo,texto,session["usuarios"])
+        (titulo,texto,session["user"])
         )
 
         conn.commit()

@@ -208,7 +208,7 @@ body::before {
 
 .container{
     max-width:1200px;
-    margin:auto;
+    margin: auto ;
     padding:40px;
     display: flex;
     flex-direction: column;
@@ -221,6 +221,8 @@ body::before {
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     position: relative;
     overflow: hidden;
+    height: 500 ;
+    width: 500;
 }
 
 
